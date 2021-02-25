@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingFilmImage">30dp</dimen>
+    <dimen name="poster_height">180dp</dimen>
+    <dimen name="padding20">20dp</dimen>
+    <dimen name="filmListTextSize">40sp</dimen>
+    <dimen name="filmTitleSize">30sp</dimen>
+    <dimen name="title_top_margin">15dp</dimen>
+</resources>
