@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Kotlin HW-1</string>
+    <string name="app_name">Cinema app</string>
+    <string name="Title_film_list">Список фильмов</string>
+    <string name="Nachalo">Начало</string>
+    <string name="mr_nobody">Господин никто</string>
+    <string name="final_cosmos">Крайний космос</string>
+    <string name="interstellar">Интерстеллар</string>
 </resources>
