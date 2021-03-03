@@ -1,113 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fonkino"
+    tools:context="com.example.android.cinemaapp.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fonkino"
-        android:padding="@dimen/padding20"
-        tools:context=".MainActivity">
+        android:id="@+id/container"/>
 
-        <TextView
-            android:id="@+id/textViewMainPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Title_film_list"
-            android:textColor="@color/filmListColor"
-            android:textSize="@dimen/filmListTextSize"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/cinema_1_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/title_top_margin"
-            android:text="@string/Nachalo"
-            android:textColor="@color/film_title_color"
-            android:textSize="@dimen/filmTitleSize"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/poster_1"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/textViewMainPage" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/poster_1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/poster_height"
-            android:background="@drawable/nachalo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cinema_1_name" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/cinema_2_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/title_top_margin"
-            android:text="@string/mr_nobody"
-            android:textColor="@color/film_title_color"
-            android:textSize="@dimen/filmTitleSize"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/poster_2"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/poster_1" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/poster_2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/poster_height"
-            android:background="@drawable/ms_nobody"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/cinema_2_name" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/cinema_3_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/title_top_margin"
-            android:text="@string/final_cosmos"
-            android:textColor="@color/film_title_color"
-            android:textSize="@dimen/filmTitleSize"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/poster_3"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/poster_2" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/poster_3"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/poster_height"
-            android:background="@drawable/final_cosmos"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/cinema_3_name" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/cinema_4_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/title_top_margin"
-            android:text="@string/interstellar"
-            android:textColor="@color/film_title_color"
-            android:textSize="@dimen/filmTitleSize"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/poster_4"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/poster_3" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/poster_4"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/poster_height"
-            android:background="@drawable/interstellar"
-            app:layout_constraintStart_toStartOf="@id/poster_1"
-            app:layout_constraintTop_toBottomOf="@id/cinema_4_name" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>
