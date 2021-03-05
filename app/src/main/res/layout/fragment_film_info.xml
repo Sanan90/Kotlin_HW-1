@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FilmInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/filmInfoName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/hello_blank_fragment"
+            android:textSize="@dimen/filmNameHeight"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/filmInfoYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filmInfoName" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filmInfoYear">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
