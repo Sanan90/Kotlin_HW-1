@@ -14,7 +14,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/filmName"
         android:layout_width="@dimen/dp0"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/filmNameHeight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
         app:layout_constraintTop_toTopOf="@id/filmPoster" />
