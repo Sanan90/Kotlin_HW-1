@@ -11,5 +11,5 @@
     <dimen name="dp0">0dp</dimen>
     <dimen name="dp2">2dp</dimen>
     <dimen name="view_margin">20dp</dimen>
-    <dimen name="filmNameHeight">40dp</dimen>
+    <dimen name="filmNameHeight">40sp</dimen>
 </resources>

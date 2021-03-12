@@ -15,6 +15,9 @@
         android:id="@+id/filmName"
         android:layout_width="@dimen/dp0"
         android:layout_height="@dimen/filmNameHeight"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
         app:layout_constraintTop_toTopOf="@id/filmPoster" />
@@ -23,6 +26,9 @@
         android:id="@+id/release"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
         app:layout_constraintTop_toBottomOf="@id/filmName" />
@@ -31,6 +37,9 @@
         android:id="@+id/genre"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
         app:layout_constraintTop_toBottomOf="@id/release" />
@@ -39,6 +48,9 @@
         android:id="@+id/raiting"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
         app:layout_constraintTop_toBottomOf="@id/genre" />
@@ -47,6 +59,9 @@
         android:id="@+id/duration"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
         app:layout_constraintTop_toBottomOf="@id/raiting" />
@@ -55,18 +70,21 @@
         android:id="@+id/aboutFilm"
         android:layout_width="@dimen/dp0"
         android:layout_height="@dimen/dp0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/filmPoster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/filmPoster"
-        app:layout_constraintTop_toBottomOf="@id/duration"
-        app:layout_constraintBottom_toBottomOf="@id/filmPoster"/>
+        app:layout_constraintTop_toBottomOf="@id/duration" />
 
     <View
-        android:layout_margin="@dimen/view_margin"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp2"
-        app:layout_constraintTop_toBottomOf="@id/filmPoster"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/view_margin"
+        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/black"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filmPoster" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
