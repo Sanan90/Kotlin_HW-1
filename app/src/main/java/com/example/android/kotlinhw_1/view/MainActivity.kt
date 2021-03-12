@@ -9,21 +9,15 @@ import com.example.android.kotlinhw_1.viewModel.Navigation
 
 class MainActivity : AppCompatActivity() {
 
-    var navigation: Navigation? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigation = Navigation(supportFragmentManager) // Усстанавливаем фоагмент Менеджера
         if (savedInstanceState == null) {
-            navigation?.addFragment(FilmsListFragment().newInstance(), false)
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, FilmsListFragment.newInstance())
+                .commitAllowingStateLoss()
         }
-
-        initViews();
-    }
-
-    private fun initViews() {
     }
 }
 
