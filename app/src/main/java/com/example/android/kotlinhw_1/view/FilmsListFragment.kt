@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.kotlinhw_1.view.FilmInfoFragment
 import com.example.android.kotlinhw_1.view.FilmListFragmentAdapter
 import com.example.android.kotlinhw_1.model.Film
+import com.example.android.kotlinhw_1.model.addToBackStack
 import com.example.android.kotlinhw_1.viewModel.AppState
 import com.example.android.kotlinhw_1.viewModel.MainViewModel
 
@@ -26,14 +27,19 @@ class FilmsListFragment : Fragment() {
     private val filmListFragmentAdapter = FilmListFragmentAdapter(object : OnItemViewClickListener {
         override fun onItemViewClick(film: Film) {
             Toast.makeText(context, film.name, Toast.LENGTH_SHORT).show()
-            activity?.supportFragmentManager?.apply {
-                beginTransaction().add(R.id.container, FilmInfoFragment.newInstance(Bundle().apply {
-                    putParcelable(FilmInfoFragment.BUNDLE_EXTRA, film)
-                }))
-                    .addToBackStack("")
-                    .commitAllowingStateLoss()
+            val bundle : Bundle = Bundle().apply {
+                putParcelable(FilmInfoFragment.BUNDLE_EXTRA, film)
             }
-        }
+            activity?.supportFragmentManager?.addToBackStack(FilmInfoFragment::class, bundle)
+
+
+//                val bundle : Bundle = Bundle().apply {
+//                    putParcelable(FilmInfoFragment.BUNDLE_EXTRA, film)
+//                }
+//                beginTransaction().add(R.id.container, FilmInfoFragment.newInstance(bundle))
+//                    .addToBackStack("")
+//                    .commitAllowingStateLoss()
+            }
     })
 
     override fun onCreateView(

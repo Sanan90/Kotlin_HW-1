@@ -17,21 +17,40 @@ data class Film(
 ) : Parcelable
 
 fun getFilms() = listOf(
-    Film(
+    lambda(
         "Начало", R.drawable.nachalo, 2010, "Фантастика", 9F,
-        listOf("Леонардо Ди Каприо", "Том Харди"), 2.5F, "About nachalo"
+        listOf("Леонардо Ди Каприо", "Том Харди"), 2.5F
     ),
-    Film(
+    lambda(
         "Господин никто", R.drawable.ms_nobody, 2009, "Фантастика", 9.6F,
-        listOf("Джаред Лето", "Диана Крюгер"), 2.22F, "About ms nobody"
+        listOf("Джаред Лето", "Диана Крюгер"), 2.22F
     ),
-    Film(
+    lambda(
         "Крайний космос", R.drawable.final_cosmos, 2018, "Фантастика", 8.8F,
-        listOf("Герри Гудспид", "Пряник"), 0.20F, "About final cosmos"
+        listOf("Герри Гудспид", "Пряник"), 0.20F
     ),
-    Film(
+    lambda(
         "Интерстеллар", R.drawable.interstellar, 2014, "Фантастика", 9.3F,
-        listOf("Меттью Макконехи", "Энн Хетеуэй"), 2.32F, "About interstellar"
+        listOf("Меттью Макконехи", "Энн Хетеуэй"), 2.32F
     )
 )
+
+var lambda : (String, Int, Int, String, Float, List<String>, Float) -> Film = {
+    name, image, release, genre, raiting, starring, duration ->
+    val aboutFilm : String = "Название фильма $name. $name снят в $release году. " +
+            "Жанр фильма $genre. Рейтинг фильма $raiting. " +
+            "Фильм длится $duration \n В фильме снимались $starring"
+    Film(name, image, release, genre, raiting, starring, duration, aboutFilm)
+}
+
+class FilmInfoBuild (private val filmInfo : (String, Int, Int, String, Float, List<String>, Float) -> Film ) {
+
+    fun aboutFilm() {
+        val film2 : Film = filmInfo("Господин никто", R.drawable.ms_nobody, 2009, "Фантастика", 9.6F,
+            listOf("Джаред Лето", "Диана Крюгер"), 2.22F)
+    }
+
+}
+
+
 

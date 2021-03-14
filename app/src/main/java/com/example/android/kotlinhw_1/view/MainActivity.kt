@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.example.android.kotlinhw_1.FilmsListFragment
 import com.example.android.kotlinhw_1.R
+import com.example.android.kotlinhw_1.model.addToBackStack
 import com.example.android.kotlinhw_1.viewModel.Navigation
 
 class MainActivity : AppCompatActivity() {
@@ -14,9 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, FilmsListFragment.newInstance())
-                .commitAllowingStateLoss()
+            supportFragmentManager.addToBackStack(FilmsListFragment::class)
         }
     }
 }

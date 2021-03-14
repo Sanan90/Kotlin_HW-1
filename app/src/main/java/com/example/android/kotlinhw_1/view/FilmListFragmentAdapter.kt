@@ -59,6 +59,8 @@ class FilmListFragmentAdapter (private var onItemViewClickListener: OnItemViewCl
                     film.duration.toString()
                 findViewById<MaterialTextView>(R.id.raiting).text =
                     film.rating.toString()
+                findViewById<MaterialTextView>(R.id.starring).text =
+                    film.starring.toString()
                 findViewById<MaterialTextView>(R.id.aboutFilm).text =
                     film.aboutFilm
 //                findViewById<AppCompatImageView>(R.id.filmPoster).background =
